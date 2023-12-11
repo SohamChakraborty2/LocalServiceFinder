@@ -1,0 +1,28 @@
+.header{
+    padding:0.5em 1em;
+    display: flex;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.right{
+    display: flex;
+    margin-left: auto;
+    gap:2em;
+}
+.right > button:first-child{
+    background-color: white;
+    border: none;
+}
+.left > span, .right > button:first-child{
+    color: black;
+    font-weight: bold;
+    opacity: 0.6;
+}
+.left > span:hover, .right> button:first-child:hover{
+    opacity: 1;
+}
+

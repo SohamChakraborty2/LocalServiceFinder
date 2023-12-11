@@ -1,0 +1,32 @@
+button{
+    color: white;
+    background-color: black;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    outline:none;
+    cursor: pointer;
+}
+.h1{
+    font-size: 5.5rem
+}
+.p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0.6;
+    font-size: 1.25rem;
+    font-weight: 700;
+    max-width: 70ch;
+}
+.img{
+    width: 500px;
+    height: auto;
+}
+.section{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.left,.right{
+    width: 40%;
+}
