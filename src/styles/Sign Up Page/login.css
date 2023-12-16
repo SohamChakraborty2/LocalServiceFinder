@@ -1,0 +1,171 @@
+/* css reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#background {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7762e3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background>.float_card {
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#background>.flex {
+    display: flex;
+}
+
+#background>.flex>.image {
+    width: 50%;
+    border-radius: 20px 0 0 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background>.flex>.image>img {
+    width: 70%;
+}
+
+.float_card>.login {
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0 9em;
+}
+
+.float_card>.login>.login_h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
+.float_card>.login>.login_h2>span {
+    color: #a37df6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.float_card>.login>.login_h4 {
+    color: #7f7d7d;
+    font-weight: 500;
+    padding: .2em 0;
+}
+
+.flex>.login>form>.user_label>.user_h2,
+.flex>.login>form>.pass_label>.pass_h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: .5em;
+    color: #343333;
+}
+
+.text_input {
+    border-radius: 7px;
+    padding: .5em .3em;
+    width: 100%;
+    border: 2px solid #9b9b9b;
+    margin-bottom: 2em;
+}
+
+.text_input::placeholder {
+    font-size: 1rem;
+    color: #7f7d7d;
+}
+
+.flex>.login>form>.rem_forgot>.rem_flex {
+    display: flex;
+}
+
+.flex>.login>form>.rem_forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -1em 0 1.5em 0;
+}
+
+.flex>.login>form>.rem_forgot>label>h4 {
+    font-size: .8em;
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+.f_pass {
+    font-size: .8em;
+    font-weight: thin;
+    color: #363636;
+    text-decoration: underline;
+}
+
+.f_pass:hover {
+    color: #9c4c8b;
+    cursor: pointer;
+
+}
+
+.login_btn {
+    border-radius: 7px;
+    padding: .5em .3em;
+    width: 100%;
+    border: none;
+    margin-bottom: 2em;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+
+.login_btn:hover {
+    background-color: rgb(173, 172, 172);
+    color: black;
+}
+
+.sign_up {
+    align-self: center;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #9c4c8b;
+}

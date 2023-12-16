@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import "../../styles/Sign Up Page/login.css";
+import "../../styles/Sign Up Page/login.css";
 import { Link, useNavigate } from "react-router-dom";
-import finder from '../../assets/finder1.png'
+import finder from "../../assets/finder1.png";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="background">
+    <div id="background">
       <div className="flex float_card">
         <div className="image">
           <img src={finder} alt="Local Service Finder"></img>
@@ -65,7 +65,7 @@ const Login = () => {
             </label>
             <br />
             <div className="rem_forgot">
-              <label className="flex">
+              <label className="rem_flex">
                 <input className="checkbox_input" type="checkbox" />
                 <h4>Remember me</h4>
               </label>

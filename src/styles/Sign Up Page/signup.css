@@ -1,0 +1,180 @@
+/* css reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#background {
+    background-color: #7762e3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background>.float_card {
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#background>.flex {
+    display: flex;
+}
+
+#background>.flex>.image {
+    width: 50%;
+    border-radius: 20px 0 0 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background>.flex>.image>img {
+    width: 70%;
+}
+
+.float_card>.signup {
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+}
+
+.back {
+    display: flex;
+    gap: 12px;
+}
+
+.go_back_image {
+    width: 6%;
+    align-self: center;
+}
+
+.back>p {
+    font-size: 1.1rem;
+}
+
+.float_card>.signup>.signup_h2 {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup_h4 {
+    color: #7f7d7d;
+    font-weight: 500;
+    padding: .2em 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form_sign_up {
+    margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.form_sign_up>.first_row>.first_name>h2,
+.form_sign_up>.first_row>.last_name>h2,
+.form_sign_up>.second_row>.user_name>h2,
+.form_sign_up>.second_row>.pass_label>h2,
+.form_sign_up>.type_label>h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #343333;
+
+}
+
+.first_row,
+.second_row {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.first_name_text_input,
+.last_name_text_input,
+.username_text_input,
+.pass_text_input {
+    border-radius: 7px;
+    padding: .3em .4em;
+    width: 95%;
+    border: 2px solid #9b9b9b;
+    margin-bottom: 1.2em;
+}
+
+.type_label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.select {
+    border-radius: 7px;
+    padding: .1em .3em;
+    width: 31%;
+    border: 2px solid #9b9b9b;
+    text-align: center;
+
+}
+
+.signup_btn,
+.next_btn {
+    border-radius: 7px;
+    padding: .5em .3em;
+    width: 100%;
+    border: none;
+    margin-bottom: 2em;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.signup_btn:hover,
+.next_btn:hover {
+    background-color: rgb(173, 172, 172);
+    color: black;
+}
+
+.log_in {
+    align-self: center;
+}
+
+.link_signup {
+    color: black;
+    text-decoration: none;
+}
+
+.link_signup:hover {
+    text-decoration: underline;
+    color: #9c4c8b;
+}
