@@ -6,7 +6,9 @@ import connectIcon from '../../assets/connect-icon.png'
 import emailIcon from '../../assets/email-icon.png'
 import twitterIcon from '../../assets/twitter-icon.png'
 import linkedinIcon from '../../assets/linkedin-icon.png'
+import { Link } from 'react-router-dom'
 import '../../styles/Landing Page/landingpage.css'
+
 function Header() {
     return (
         <header className={styles.header}>
@@ -18,8 +20,8 @@ function Header() {
                 <span><a href="#contact">Contact</a></span>
             </div>
             <div className={styles.right}>
-                <button>Login</button>
-                <button>Register</button>
+                <button><Link to='login'>Login</Link></button>
+                <button><Link to='signup'>Register</Link></button>
             </div>
         </header>
     )

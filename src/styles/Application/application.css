@@ -1,0 +1,29 @@
+/* css reset */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+img, picture, svg, video {
+display: block;
+max-width: 100%;
+}
+
+input, textarea, button, select {
+font: inherit;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+min-height: 100vh;
+}
+
+/* Styling Header */
+header{
+    padding:0.5em 1em;
+    display: flex;
+    border-bottom: 1px solid rgba(227,227,227,1.00);
+}
