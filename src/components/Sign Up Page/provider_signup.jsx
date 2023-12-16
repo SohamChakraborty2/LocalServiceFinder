@@ -1,9 +1,9 @@
 // ProviderSignUp.js
 
 import React, { useState } from "react";
-// import "../../styles/Sign Up Page/provider_signup.css";
+import "../../styles/Sign Up Page/provider_signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import finder from '../../assets/finder1.png'
+import finder from "../../assets/finder1.png";
 const ProviderSignUp = () => {
   const [businessName, setBusinessName] = useState("");
   const [services, setServices] = useState([]);
@@ -27,13 +27,13 @@ const ProviderSignUp = () => {
     }
   };
   return (
-    <div className="background">
+    <div id="background">
       <div className="flex float_card">
         <div className="image">
           <img src={finder} alt="Local Service Finder"></img>
         </div>
         <div className="provider_signup">
-          <h2>Additional Information</h2>
+          <h2 className="provider_signup_h2">Additional Information</h2>
           <form className="Provider_signup_form">
             <label className="Buisness_name">
               <h2>Business Name</h2>

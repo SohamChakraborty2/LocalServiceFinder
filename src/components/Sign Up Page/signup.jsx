@@ -1,10 +1,10 @@
 // SignUp.js
 
 import React, { useState } from "react";
-// import "../../styles/Sign Up Page/signup.css";
+import "../../styles/Sign Up Page/signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import finder from '../../assets/finder1.png'
-import arrow from '../../assets/arrow.svg'
+import finder from "../../assets/finder1.png";
+import arrow from "../../assets/arrow.svg";
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -45,7 +45,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="background">
+    <div id="background">
       <div className="flex float_card">
         <div className="image">
           <img src={finder} alt="Local Service Finder"></img>
@@ -63,7 +63,6 @@ const SignUp = () => {
             <div className="first_row">
               <label className="first_name">
                 <h2>First Name</h2>
-
                 <input
                   className="first_name_text_input"
                   type="text"
@@ -74,7 +73,6 @@ const SignUp = () => {
 
               <label className="last_name">
                 <h2>Last Name</h2>
-
                 <input
                   className="last_name_text_input"
                   type="text"
