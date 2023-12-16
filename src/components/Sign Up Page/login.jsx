@@ -18,7 +18,7 @@ const Login = () => {
       if (matchedUser && matchedUser.password === password) {
         // If matched than navigate to other or Home page
         alert("Sucessful Logged In");
-        navigate("/");
+        navigate("/application");
       } else if (matchedUser == null) {
         alert("User not found");
       } else {
