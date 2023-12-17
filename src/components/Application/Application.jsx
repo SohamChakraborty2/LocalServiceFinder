@@ -2,7 +2,20 @@ import "../../styles/Application/application.css";
 import SearchBar from "./SearchBar";
 import React, { useState } from "react";
 
+
 function Application() {
+  function Header() {
+    return (
+      <header>
+        <h3>Local Service Finder</h3>
+
+        <SearchBar
+          categories={serviceDatabase.map((category) => category.category)}
+          onSelect={handleCategorySelect}
+        />
+      </header>
+    )
+  }
   const serviceDatabase = [
     {
       category: "Electrical services",
@@ -1047,10 +1060,7 @@ function Application() {
 
   return (
     <>
-      <SearchBar
-        categories={serviceDatabase.map((category) => category.category)}
-        onSelect={handleCategorySelect}
-      />
+      <Header />
       {renderProfessionalDetails()}
     </>
   );
