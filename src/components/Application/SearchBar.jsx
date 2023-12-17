@@ -1,41 +1,31 @@
 import React, { useState } from "react";
+import SearchIcon from '../../assets/search-icon.png'
+import '../../styles/Application/searchbar.css'
 
 const SearchBar = ({ categories, onSelect }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-  const handleInputChange = (event) => {
-    const newSearchTerm = event.target.value;
-    setSearchTerm(newSearchTerm);
-
-    // Filter categories based on the input
-    const filteredSuggestions = categories.filter((category) =>
-      category.toLowerCase().includes(newSearchTerm.toLowerCase())
-    );
-    setSuggestions(filteredSuggestions);
-  };
-
-  const handleSelectCategory = (category) => {
-    setSearchTerm("");
-    setSuggestions([]);
-    onSelect(category);
+  const handleSelectChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedCategory(selectedValue);
+    onSelect(selectedValue);
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        placeholder="Search for a category..."
-      />
-      <ul>
-        {suggestions.map((category) => (
-          <li key={category} onClick={() => handleSelectCategory(category)}>
+    <div className="search-bar">
+      <label htmlFor="categorySelect"><img src={SearchIcon} alt="" /></label>
+      <select
+        id="categorySelect"
+        value={selectedCategory}
+        onChange={handleSelectChange}
+      >
+        <option value="" disabled>Select a category...</option>
+        {categories.map((category) => (
+          <option key={category} value={category}>
             {category}
-          </li>
+          </option>
         ))}
-      </ul>
+      </select>
     </div>
   );
 };

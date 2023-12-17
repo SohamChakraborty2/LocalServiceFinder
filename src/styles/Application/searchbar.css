@@ -1,0 +1,15 @@
+.search-bar{
+    border: 2px solid rgba(196, 196, 196, 0.597);
+    border-radius: 5px;
+    padding: 0em 0.6em;
+    display: flex;
+    align-items: center;
+}
+.search-bar select {
+    border: none;
+    outline: none;
+}
+.search-bar  img{
+    width: auto;
+    height: 40px;
+}
