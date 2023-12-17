@@ -40,7 +40,7 @@ const SignUp = () => {
     } else {
       data.unshift(personalData);
       localStorage.setItem("userData", JSON.stringify(data));
-      navigate("/");
+      navigate("/login");
     }
   };
 

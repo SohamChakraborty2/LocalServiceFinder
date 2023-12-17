@@ -39,7 +39,7 @@ const ProviderSignUp = () => {
     } else {
       userData[0] = { ...userData[0], ...providerData };
       localStorage.setItem("userData", JSON.stringify(userData));
-      navigate("/");
+      navigate("/login");
     }
   };
   return (
