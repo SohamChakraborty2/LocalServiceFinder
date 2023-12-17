@@ -1,21 +1,13 @@
 import "../../styles/Application/application.css";
 import SearchBar from "./SearchBar";
 import React, { useState } from "react";
-
+import ContactIcon from '../../assets/contact-icon.png'
+import LocationIcon from '../../assets/location-icon.png'
+import PhoneIcon from '../../assets/phone-icon.png'
+import StarIcon from '../../assets/star-icon.png'
+import { Link } from "react-router-dom";
 
 function Application() {
-  function Header() {
-    return (
-      <header>
-        <h3>Local Service Finder</h3>
-
-        <SearchBar
-          categories={serviceDatabase.map((category) => category.category)}
-          onSelect={handleCategorySelect}
-        />
-      </header>
-    )
-  }
   const serviceDatabase = [
     {
       category: "Electrical services",
@@ -1025,6 +1017,56 @@ function Application() {
       ],
     },
   ];
+  const dataArray = JSON.parse(localStorage.getItem("userData"));
+
+  dataArray.forEach((provider) => {
+    if (provider.utype === "Provider" && provider.services) {
+      const category = serviceDatabase.find(
+        (category) => category.category === provider.services
+      );
+      if (category) {
+        const randomDistance = Math.floor(Math.random() * 10) + 1;
+        const randomRating = Math.random() * 4 + 1;
+        category.professionals.unshift({
+          name: provider.fname + " " + provider.lname,
+          distance: randomDistance,
+          shopName: provider.bname,
+          phoneNumber: provider.phone,
+          rating: randomRating.toFixed(1),
+        });
+      }
+    }
+  });
+  function Header() {
+    return (
+      <header>
+        <h3>Local Service Finder</h3>
+
+        <SearchBar
+          categories={serviceDatabase.map((category) => category.category)}
+          onSelect={handleCategorySelect}
+        />
+        <button>
+          <Link to='/'>Sign Out</Link>
+        </button>
+      </header>
+    )
+  }
+
+  function Presets() {
+    return (
+      <div className="presets">
+        <h2>Home services at your doorstep</h2>
+        <div className="preset-section">
+          <h3>What are you looking for?</h3>
+          <div className="container">
+            <div><img src="" alt="" /><p></p></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategorySelect = (category) => {
@@ -1038,16 +1080,17 @@ function Application() {
       );
 
       return (
-        <div>
+        <div className="details-section">
           <h2>{selectedCategory}</h2>
           <ul>
             {categoryData.professionals.map((professional) => (
               <li key={professional.name}>
-                <p>Name: {professional.name}</p>
-                <p>Distance: {professional.distance} miles</p>
-                <p>Shop Name: {professional.shopName}</p>
-                <p>Phone Number: {professional.phoneNumber}</p>
-                <p>Rating: {professional.rating}</p>
+                <div> {professional.shopName}</div>
+                <div className="row">
+                  <div><img src={LocationIcon} /> {professional.distance} km</div>
+                  <div><img src={PhoneIcon} /> <a href={'https://wa.me/+91' + professional.phoneNumber} >{professional.phoneNumber}</a></div>
+                  <div><img src={StarIcon} /> {professional.rating}</div>
+                </div>
               </li>
             ))}
           </ul>
@@ -1061,7 +1104,10 @@ function Application() {
   return (
     <>
       <Header />
-      {renderProfessionalDetails()}
+      <div className="hero">
+        {renderProfessionalDetails()}
+
+      </div>
     </>
   );
 }
