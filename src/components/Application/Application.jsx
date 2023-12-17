@@ -1060,7 +1060,15 @@ function Application() {
         <div className="preset-section">
           <h3>What are you looking for?</h3>
           <div className="container">
-            <div><img src="" alt="" /><p></p></div>
+            <div><img src="" alt="" /><p>Electrical Services</p></div>
+            <div><img src="" alt="" /><p>Plumbing Repairs</p></div>
+            <div><img src="" alt="" /><p>Painting Services</p></div>
+            <div><img src="" alt="" /><p>Haircut and Styling</p></div>
+            <div><img src="" alt="" /><p>Pet grooming</p></div>
+            <div><img src="" alt="" /><p>Windows cleaning</p></div>
+            <div><img src="" alt="" /><p>Yoga instruction</p></div>
+            <div><img src="" alt="" /><p>Nutrition consulting</p></div>
+            <div><img src="" alt="" /><p>Make up artist services</p></div>
           </div>
         </div>
       </div>
@@ -1105,8 +1113,8 @@ function Application() {
     <>
       <Header />
       <div className="hero">
+        <Presets />
         {renderProfessionalDetails()}
-
       </div>
     </>
   );
