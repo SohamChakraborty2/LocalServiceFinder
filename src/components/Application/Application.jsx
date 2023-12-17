@@ -6,7 +6,15 @@ import LocationIcon from '../../assets/location-icon.png'
 import PhoneIcon from '../../assets/phone-icon.png'
 import StarIcon from '../../assets/star-icon.png'
 import { Link } from "react-router-dom";
-
+import Diet from '../../assets/diet.png'
+import Electric from '../../assets/electric.png'
+import Haircut from '../../assets/haircut.png'
+import MakeUp from '../../assets/makeup.png'
+import Painting from '../../assets/painting.png'
+import Pet from '../../assets/pet.png'
+import Plumbing from '../../assets/plumbing.png'
+import Window from '../../assets/window-cleaning.png'
+import Yoga from '../../assets/yoga.png'
 function Application() {
   const serviceDatabase = [
     {
@@ -1056,19 +1064,19 @@ function Application() {
   function Presets() {
     return (
       <div className="presets">
-        <h2>Home services at your doorstep</h2>
+        <h2>Home services at <br /> your doorstep</h2>
         <div className="preset-section">
           <h3>What are you looking for?</h3>
           <div className="container">
-            <div><img src="" alt="" /><p>Electrical Services</p></div>
-            <div><img src="" alt="" /><p>Plumbing Repairs</p></div>
-            <div><img src="" alt="" /><p>Painting Services</p></div>
-            <div><img src="" alt="" /><p>Haircut and Styling</p></div>
-            <div><img src="" alt="" /><p>Pet grooming</p></div>
-            <div><img src="" alt="" /><p>Windows cleaning</p></div>
-            <div><img src="" alt="" /><p>Yoga instruction</p></div>
-            <div><img src="" alt="" /><p>Nutrition consulting</p></div>
-            <div><img src="" alt="" /><p>Make up artist services</p></div>
+            <div><img src={Electric} alt="" /><p>Electrical Services</p></div>
+            <div><img src={Plumbing} alt="" /><p>Plumbing Repairs</p></div>
+            <div><img src={Painting} alt="" /><p>Painting Services</p></div>
+            <div><img src={Haircut} alt="" /><p>Haircut and Styling</p></div>
+            <div><img src={Pet} alt="" /><p>Pet grooming</p></div>
+            <div><img src={Window} alt="" /><p>Windows cleaning</p></div>
+            <div><img src={Yoga} alt="" /><p>Yoga instruction</p></div>
+            <div><img src={Diet} alt="" /><p>Nutrition consulting</p></div>
+            <div><img src={MakeUp} alt="" /><p>Make up artist services</p></div>
           </div>
         </div>
       </div>
